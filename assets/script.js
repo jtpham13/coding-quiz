@@ -13,13 +13,22 @@ function beginQuiz (){
 
 var questions = [
     {
-        questionText: "Which of the following is a array?", 
-        answerChoices: ['Answer1', 'Answer2', 'Answer3', 'Answer4'],
-        correctAnswer: 'Answer2'
+        questionText: "Which of the following characters surround an array?", 
+        answerChoices: ['{}', '[]', '()', '<>'],
+        correctAnswer: '[]'
     },
 
     {
+        questionText: "Inside which html element does javascript go?",
+        answerChoices: ['<javascript>', '<js>', '<script>','<scripture>'],
+        correctAnswer: '<script>'
         
+
+    },
+    {
+        questionText: "Inside which html element does javascript go?",
+        answerChoices: ['<javascript>', '<js>', '<script>','<scripture>'],
+        correctAnswer: '<script>'
 
     }
 ]
