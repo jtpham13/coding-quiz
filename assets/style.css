@@ -1,5 +1,9 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
 
+.liststyle{
+    list-style: none;
+    background-color: purple;
+    color:white;
+    margin-top: 5px;
+    width: 100px;
+    border-radius: 5px;
+}
