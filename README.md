@@ -11,3 +11,7 @@ This project is not yet complete. It is still a work in progress.
 
 [Click here for repo](https://github.com/jtpham13/coding-quiz)
 [Click here for live site](https://jtpham13.github.io/coding-quiz/)
+
+## License 
+
+Refer to the license in the repository
