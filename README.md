@@ -6,3 +6,8 @@ In this weeks challenge I was tasked to make a quiz on javascript. During the ch
 This project is not yet complete. It is still a work in progress. 
 
 ## Usage
+
+<img src="https://github.com/jtpham13/coding-quiz/blob/main/screenshot/codingquiz.png"/>
+
+[Click here for repo](https://github.com/jtpham13/coding-quiz)
+[Click here for live site](https://jtpham13.github.io/coding-quiz/)
