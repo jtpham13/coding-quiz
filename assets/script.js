@@ -42,7 +42,7 @@ showQuestions()
 function showQuestions(){
     
  
-// displaying question 1   
+// displaying question 1  
 quizQuestions.textContent = questions[0].questionText
 
 
@@ -100,7 +100,7 @@ function checkAnswer(){
 
 
 function showQuestion2() {
-
+answerChoicesList.innerHTML = ""
     quizQuestions.textContent = questions[1].questnsionText
 
 
