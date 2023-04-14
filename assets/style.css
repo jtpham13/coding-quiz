@@ -3,13 +3,14 @@
     display: block;
     text-align: center;
     list-style: none;
-    background-color: purple;
+    background-color:tan;
     color:white;
     margin-top: 5px;
     width: 100px;
     border-radius: 5px;
 }
 
+/* added style to quiz box */
 .quiz-box{
     display: block;
     text-align: center;
@@ -17,7 +18,7 @@
     width:1000px;
     border-radius: 20px;
 }
-
+/* added style to nav */
 #landing-page{
     display: block;
     text-align: center;
