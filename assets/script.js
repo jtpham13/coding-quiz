@@ -4,6 +4,7 @@ var quizQuestions = document.querySelector("#quiz-questions")
 var answerChoicesList = document.querySelector("#answer-choices")
 var quizContainer= document.getElementById("quiz-container")
 var isCorrect = document.getElementById('isCorrect')
+var buttonContainer = document.querySelector("#button-container")
 
 // Quiz Questions
 var questions = [
@@ -21,12 +22,22 @@ var questions = [
 
     },
     {
-        questionText: "Inside which html element does javascript go?",
-        answerChoices: ['<javascript>', '<js>', '<script>','<scripture>'],
-        correctAnswer: '<script>'
+        questionText: "Which of the following are Javascript data types?",
+        answerChoices: ['apples', 'number', 'boolean' ,'pizza'],
+        correctAnswer: 'boolean'
 
-    }
+    },
+    {
+        questionText: "Which of these are NOT looping structures in Javascript?",
+        answerChoices: ['for', 'while', 'do-while' ,'loopy loop'],
+        correctAnswer: 'loopy loop'
+
+    },
 ]
+
+
+
+let currentQuestion = 0
 
 // Landing page to start quiz
 startQuiz.addEventListener('click', beginQuiz) 
@@ -42,12 +53,15 @@ showQuestions()
 function showQuestions(){
     
  
-// displaying question 1  
-quizQuestions.textContent = questions[0].questionText
+
+// displaying questions for quiz  
+buttonContainer.innerHTML = ""
+answerChoicesList.innerHTML = ""
+quizQuestions.textContent = questions[currentQuestion].questionText
 
 
 
-var answerChoicesArray= questions[0].answerChoices
+var answerChoicesArray= questions[currentQuestion].answerChoices
 
 answerChoicesArray.forEach(function(answer){
 console.log(answer)
@@ -55,15 +69,16 @@ console.log(answer)
 
 var answerListTag=document.createElement("li")
  
+var answerButton=document.createElement("button")
 
 
-answerListTag.innerHTML=answer
+answerButton.textContent= answer
 console.log(answerListTag)
-
+answerListTag.append(answerButton)
 answerListTag.classList.add("liststyle")
-answerListTag.addEventListener('click', (event)=>{
+answerButton.addEventListener('click', (event)=>{
     var userAnswer = event.target.innerHTML
-    if(userAnswer === questions[0].correctAnswer){
+    if(userAnswer === questions[currentQuestion].correctAnswer){
         console.log('correct')
         isCorrect.innerHTML = "Correct"
     } else{
@@ -73,23 +88,30 @@ answerListTag.addEventListener('click', (event)=>{
 
 answerChoicesList.appendChild(answerListTag)
 
+
+
 }) 
 
 var nextBtn= document.createElement("button")
 console.log(nextBtn)
 nextBtn.innerHTML="next"
-console.log(quizContainer)
+console.log(buttonContainer)
 nextBtn.addEventListener('click', function(){
-    showQuestion2();
+    checkAnswer();
 
 })
-quizContainer.append(nextBtn)
+buttonContainer.append(nextBtn)
 
 };
 
 
 function checkAnswer(){
     console.log('clicked')
+    currentQuestion++
+    if(currentQuestion===questions.length){
+    //  call end quiz 
+    }
+    showQuestions()
 }
 
 
@@ -99,44 +121,6 @@ function checkAnswer(){
 
 
 
-function showQuestion2() {
-answerChoicesList.innerHTML = ""
-    quizQuestions.textContent = questions[1].questnsionText
-
-
-
-    var answerChoicesArray= questions[1].answerChoices
-    
-    answerChoicesArray.forEach(function(answer,index){
-    console.log(answer)
-    
-    
-    var answerListTag=document.createElement("li")
-     
-    
-    
-    answerListTag.innerHTML=`${index+1}. ${answer}`
-    console.log(answerListTag)
-    
-    answerListTag.classList.add("liststyle")
-
-   
-    
-    answerChoicesList.appendChild(answerListTag)
-    
-    })
-    
-    var nextBtn= document.createElement("button")
-    console.log(nextBtn)
-    nextBtn.innerHTML="next"
-    console.log(quizContainer)
-    nextBtn.addEventListener('click', function(){
-        console.log('next')
-    
-    })
-    quizContainer.append(nextBtn)
-
-}
 
    
 
